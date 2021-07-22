@@ -1,0 +1,37 @@
+default: &default
+  base_url: http://stage-apsis:8080/kit-inventory-api/v1
+  authorization: NAT c2ZhcGl1c2VyOkBQaSE5MDkwLCBzZnVzZXI9bm9haEBhcHNpcy5pbw==
+  categories:
+    -
+      label: Horizon
+      items:
+        -
+          name: Horizon Carrier Screen Blood Collection Kit
+          description: "Horizon is a multi-disease genetic carrier screen. This kit includes instructions and blood collection tubes."
+          photo_url: https://s3-us-west-2.amazonaws.com/connect-public-resources/images/product-photos/Horizon+Blood+Sample.jpeg
+          part_number: NAT-801068
+local:
+  <<: *default
+
+test:
+  <<: *default
+
+dev:
+  <<: *default
+  connect_url: http://stage-rest-kits.natera.com/kit-inventory-api/v1/kitorder/connect
+
+
+development:
+  <<: *default
+
+staging:
+  <<: *default
+  #connect_url: http://stage-rest-kits.natera.com/kit-inventory-api/v1/kitorder/connect
+
+demo:
+  <<: *default
+  connect_url: http://stage-rest-kits.natera.com/kit-inventory-api/v1/kitorder/connect
+
+preproduction:
+  <<: *default
+  connect_url: http://stage-rest-kits.natera.com/kit-inventory-api/v1/kitorder/connect

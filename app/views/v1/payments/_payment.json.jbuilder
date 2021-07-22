@@ -1,0 +1,10 @@
+json.id                payment.id
+json.description       payment.description
+json.deposit_id        payment.deposit_id
+json.price             payment.formatted_price
+json.formatted_price   payment.formatted_price
+json.payment_type      payment.payment_type
+json.status            payment.status
+json.ready_for_payment payment.ready_for_payment
+json.payment_source    payment.payment_source
+json.deleted           payment.deleted

@@ -1,0 +1,36 @@
+# This is natera staging server deploy
+natera_staging:
+  ssh_keys:
+    - '~/.ssh/connect-infrastructure.pem'
+  roles:
+    app:
+      - 'ubuntu@cb-stage-01'
+    db:
+      #run rake db:migrate on 1 host is enough, in case all the app hosts point to the same db
+      - 'ubuntu@cb-stage-01'
+
+  application: 'cord_blood_service'
+  repo_url: 'ssh://git@stash:7999/erp/cord_blood_service.git'
+  branch: 'staging'
+  deploy_user: 'ubuntu'
+  deploy_to_dir: '/var/www/cord_blood_service'
+
+
+# This is AWS staging deploy
+staging:
+  ssh_keys:
+    - '~/.ssh/connect-infrastructure.pem'
+  roles:
+    app:
+      - 'ubuntu@52.38.122.62'
+    db:
+      #run rake db:migrate on 1 host is enough, in case all the app hosts point to the same db
+      - 'ubuntu@52.38.122.62'
+
+  application: 'cord_blood_service'
+  repo_url: 'ubuntu@10.0.0.175:git/cord_blood_service.git'
+  branch: 'staging'
+  deploy_user: 'ubuntu'
+  deploy_to_dir: '/var/www/cord_blood_service'
+
+  

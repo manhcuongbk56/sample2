@@ -1,0 +1,2 @@
+class AuthenticationException < RuntimeError
+end

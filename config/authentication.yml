@@ -1,0 +1,14 @@
+# All the data here and the public/private keys must be linked from the "shared" directory on production
+# Only keep development and test configs in here
+
+development:
+  secret_string:    50ce78ad33c43093be451f2be9346a045e524ce86a052837ba33d8205ad86010b09b04b00ae91fc6e4e823017e568020d468cc25f2c7dad8de4b709db207297f
+  hmac_key:         eda876576c95c600ed7f5d97510e92703b61f5215def2a161037fd9dd1f5b6ed4f86ce46073c0e3f34b52de0289e9c618798fff9dd4b1bfe035bdb8645fc7e48
+  
+test:
+  secret_string:    49ce67ad33c43093be451f2be9346a045e524ce86a052837ba33d8205ad86010b09b04b00ae91fc6e4e823017e568020d468cc25f2c7dad8de4b709db196297f
+  hmac_key:         eda765576c84c600ed7f5d97510e92703b61f5215def2a161037fd9dd1f5b6ed4f86ce46073c0e3f34b52de0289e9c618798fff9dd4b1bfe035bdb8645fc6e37
+
+staging:
+  secret_string:    50ce78ad33c43093be451f2be9346a045e524ce86a052837ba33d8205ad86010b09b04b00ae91fc6e4e823017e568020d468cc25f2c7dad8de4b709db207297f
+  hmac_key:         eda876576c95c600ed7f5d97510e92703b61f5215def2a161037fd9dd1f5b6ed4f86ce46073c0e3f34b52de0289e9c618798fff9dd4b1bfe035bdb8645fc7e48

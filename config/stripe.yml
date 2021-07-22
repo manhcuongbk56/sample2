@@ -1,0 +1,3 @@
+# In production, this key will be linked on the server
+stripe_secret_key: <put your stripe_secret_key here>
+stripe_publishable_key: <put your stripe_publishable_key here>
